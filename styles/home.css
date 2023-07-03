@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar>div>a>img{
+    width: 40%;
+    margin: auto;
+    /* margin-bottom:30px ; */
+}
+
