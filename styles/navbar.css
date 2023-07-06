@@ -4,7 +4,7 @@
 }
 
 .navbar{
-    /* border: 1px solid black; */
+    border: 0px solid black;
     width: 90%;
     margin: auto;
     display: flex;
@@ -17,7 +17,8 @@
 }
 
 #logo-div{
-width: 30%;
+    border: 0px solid red;
+width: 20%;
 }
 
 .navbar>div>a>img{
@@ -28,8 +29,8 @@ width: 30%;
 }
 
 .select-tag{
-    /* border: 1px solid red; */
-    width: 10%;
+    border: 0px solid red;
+    width: 8%;
     /* padding-right: 600px; */
     display: grid;
     justify-content: flex-start;
@@ -38,13 +39,14 @@ width: 30%;
 }
 
 .searchBar{
-    width: 70%;
-   padding-left: 30px;
-   margin-top: 8px;
+    width: 40%;
+   /* padding-left: 30px;
+   margin-top: 8px; */
+   /* border: 1px solid red; */
 }
 
 #searchBar{
-    width: 70%;
+    width: 100%;
     color: #313131;
     border: 0;
     background: 0 0;
@@ -63,7 +65,8 @@ width: 30%;
 }
 
 .cart{
-    border: 1px solid red;
+    border: 0px solid red;
+    width: 10px;
     padding-right: 100px;
     align-items: center;
 }  
@@ -73,7 +76,7 @@ width: 30%;
     align-items: center; 
 }
 .div-button{
-    width: 15%;
+    width: 10%;
 }
 #button{
     width: 100%;
@@ -84,7 +87,8 @@ width: 30%;
     position: relative;
     top: 0;
     height: 40px;
-    margin: 0 0 0 14px;
+    margin: 0 0 0 0px;
+    
    
 }
 #button:hover{
