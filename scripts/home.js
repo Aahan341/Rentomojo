@@ -1,7 +1,10 @@
+// navbar code here 
+import { navbar } from "../Components/navbar.js";
+let nav=document.getElementById('navbar')
+nav.innerHTML=navbar();
+
 
 // coursel code here 
-
-
 
 function sliderShow() {
     let coursel_data = [
@@ -30,6 +33,7 @@ function sliderShow() {
 
 }
 sliderShow();
+
 
 // product data here 
 
@@ -93,15 +97,17 @@ const product_data = [
  localStorage.setItem("prod_data",JSON.stringify(product_data));
 
  let data = JSON.parse(localStorage.getItem("prod_data"));
- console.log(data)
+//  console.log(data)
 
 
 function display(data){
     console.log(data)
     const product_Item= document.getElementById("product_Item");
     product_Item.innerHTML = null;
+
    
-   da && da.map((item,i)=>{
+   data && data.map((item,i)=>{
+    // console.log(data)
         let div = document.createElement("div");
         div.setAttribute("class","product_dataCard");
 
@@ -132,4 +138,4 @@ function display(data){
 };
 
 
-
+display();
