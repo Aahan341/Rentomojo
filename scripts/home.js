@@ -4,6 +4,14 @@ let nav=document.getElementById('navbar')
 nav.innerHTML=navbar();
 
 
+import { sort, last, footer } from "../Components/footer.js";
+const sort_div = document.getElementById("footer");
+sort_div.innerHTML = sort();
+footer();
+
+const last_div = document.getElementById("last_portion");
+last_div.innerHTML = last();
+
 // coursel code here 
 
 function sliderShow() {
@@ -100,42 +108,95 @@ const product_data = [
 //  console.log(data)
 
 
-function display(data){
-    console.log(data)
-    const product_Item= document.getElementById("product_Item");
-    product_Item.innerHTML = null;
+// function display(data){
+//     console.log(data)
+//     const product_Item= document.getElementById("product_Item");
+//     product_Item.innerHTML = null;
 
    
-   data && data.map((item,i)=>{
-    // console.log(data)
-        let div = document.createElement("div");
-        div.setAttribute("class","product_dataCard");
+//    data && data.map((item,i)=>{
+//     // console.log(data)
+//         let div = document.createElement("div");
+//         div.setAttribute("class","product_dataCard");
 
-        let img = document.createElement("img");
-        img.setAttribute("class","card_image")
-        img.src= item.image;
+//         let img = document.createElement("img");
+//         img.setAttribute("class","card_image")
+//         img.src= item.image;
 
-        let p_tag= document.createElement("p");
-        p_tag.setAttribute("class" ,"p_tagcard");
-        p_tag.innerText = item.name;
+//         let p_tag= document.createElement("p");
+//         p_tag.setAttribute("class" ,"p_tagcard");
+//         p_tag.innerText = item.name;
 
-        let p1_tag= document.createElement("p");
-        p1_tag.setAttribute("class" ,"p_tagcard");
-        p1_tag.innerText = item.price;
+//         let p1_tag= document.createElement("p");
+//         p1_tag.setAttribute("class" ,"p_tagcard");
+//         p1_tag.innerText = item.price;
 
-        let btn = document.createElement("button");
-        btn.setAttribute("id","btnCard");
-        btn.innerText= item.button;
+//         let btn = document.createElement("button");
+//         btn.setAttribute("id","btnCard");
+//         btn.innerText= item.button;
 
-        div.append(img, p_tag, p1_tag, btn);
+//         div.append(img, p_tag, p1_tag, btn);
 
-        console.log(div);
+//         console.log(div);
 
-        product_Item.append(div);
+//         product_Item.append(div);
      
+// })
+
+// };
+
+
+
+
+
+function display(data){
+    document.querySelector("#product_Item").innerHTML=null
+  data.forEach(function(el, i){
+      let div=document.createElement("div");
+      div.setAttribute("class", "product_div");
+      let img=document.createElement("img");
+      img.setAttribute("class","images")
+      img.src=el.image
+  
+      let name=document.createElement("h6");
+      name.setAttribute("class","title")
+      name.innerText=el.name
+
+    let div1=document.createElement("div");
+       div1.setAttribute("class","main")
+      let price=document.createElement("p");
+      price.setAttribute("class","price")
+      price.innerText=el.price
+  
+      let btn=document.createElement("button");
+      btn.innerText="See More"
+      btn.setAttribute("class","button")
+      div1.append(price,btn)
+      div.append(img, name,div1)
+    
+  
+      document.getElementById("product_Item").append(div)
+  })
+}
+
+let dataPromise = new Promise(function(resolve,reject){
+
+  setTimeout(function(){
+
+  let prod_data = data
+
+  if(data != null){
+      resolve(prod_data)
+  } else{
+      reject(`ERR: Server not found/:`);
+  }
+
+  },3000)
+});
+
+dataPromise.then(function (res){
+  display(res);
 })
-
-};
-
-
-display();
+ .catch(function(err){
+   console.log("err:",err)
+})
