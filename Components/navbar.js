@@ -15,7 +15,7 @@ const navbar = ()=>{
     <button id="card"><a href="./checkout.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></button>
 
     <div class="div-button">
-        <button id="button">LOGIN/SINGUP</button>
+        <button id="button"><a href="login.html">LOGIN/SIGNUP</a></button>
     </div>
 </div>
     ` 

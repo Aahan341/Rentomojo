@@ -117,7 +117,10 @@
     transition: 1s;
     border: 1px solid rgb(220, 50, 38);
 }
-
+#button a {
+    text-decoration: none;
+    color: #fff;
+}
 /* Medium Screen */
 @media only screen and (min-width: 500px) and (max-width: 768px) {
     .navbar {
