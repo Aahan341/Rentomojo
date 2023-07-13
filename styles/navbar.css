@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+#navbar{
+    position: sticky;
+}
 
 .navbar {
     border: 0px solid black;
