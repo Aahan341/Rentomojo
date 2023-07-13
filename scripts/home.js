@@ -200,3 +200,88 @@ dataPromise.then(function (res){
  .catch(function(err){
    console.log("err:",err)
 })
+
+
+document.getElementById("know").addEventListener("click",()=>{
+    window.location.href="https://www.rentomojo.com/benefits"
+})
+
+
+
+
+document.querySelector(".yt").addEventListener("click", () => {
+    window.location.href = "https://www.youtube.com/c/RentomojoOfficial";
+  });
+  
+  document.querySelector(".linke").addEventListener("click", () => {
+    window.location.href = "https://www.linkedin.com/company/rentomojo/";
+  });
+  
+  document.querySelector(".twitt").addEventListener("click", () => {
+    window.location.href = "https://twitter.com/rentomojo";
+  });
+  
+  document.querySelector(".fac").addEventListener("click", () => {
+    window.location.href = "https://www.facebook.com/rentomojo";
+  });
+  
+  document.querySelector(".up").addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+
+  document.querySelector(".pvt").addEventListener("click", () => {
+    window.location.href = "./index.html";
+  });
+  
+  document.querySelector("#pack").addEventListener("click", () => {
+    window.location.href ="./basepack.html";
+  });
+  
+  document.querySelector("#furni").addEventListener("click", () => {
+    window.location.href ="./basefurniture.html";
+  });
+
+  document.querySelector("#Appli").addEventListener("click", () => {
+    window.location.href ="./baseappliances.html";
+  });
+
+  document.querySelector("#Elec").addEventListener("click", () => {
+    window.location.href ="./baseelectronics.html";
+  });
+
+  document.querySelector("#Fit").addEventListener("click", () => {
+    window.location.href ="./basefitness.html";
+  });
+
+  document.querySelector("#WFH").addEventListener("click", () => {
+    window.location.href ="./basewfh.html";
+  });
+  
+
+ document.getElementById("greater").addEventListener("click",(e)=>{
+    console.log(e);
+    let ele = document.getElementById("product_Item");
+    console.log(ele);
+    ele.scrollLeft += 400;
+  })
+
+  document.getElementById("less").addEventListener("click",(e)=>{
+    console.log(e);
+    let ele = document.getElementById("product_Item");
+    console.log(ele);
+    ele.scrollLeft -= 400;
+  })
+
+  document.getElementById("greater1").addEventListener("click",(e)=>{
+    console.log(e);
+    let ele = document.querySelectorAll(".name-section");
+    console.log(ele);
+    ele.scrollLeft += 400;
+  })
+
+  document.getElementById("less1").addEventListener("click",(e)=>{
+    console.log(e);
+    let ele = document.querySelectorAll(".name-section");
+    console.log(ele);
+    ele.scrollLeft -= 400;
+  })
