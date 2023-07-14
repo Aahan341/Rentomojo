@@ -4,8 +4,11 @@
 }
 #navbar{
     position: sticky;
+    left: 0px;
+    top: 0px;
+    background-color: #fff;
+    z-index: 2;
 }
-
 .navbar {
     border: 0px solid black;
     width: 90%;

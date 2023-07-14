@@ -20,6 +20,8 @@ const navbar = ()=>{
 </div>
     ` 
 };
+export  {navbar};
+
 
 const nav2=()=>{
     return `
@@ -41,7 +43,6 @@ const nav2=()=>{
     </div>
     `
 }
+export {nav2};
 
 
-
-export  {navbar,nav2};
