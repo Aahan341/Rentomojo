@@ -9,16 +9,84 @@ nav3.innerHTML = nav2();
 
 
 
+const appliances = async()=>{
+  let res = await fetch(`http://localhost:3000/appliances`);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("appliances",JSON.stringify(data))
+  let appliances_data =  localStorage.getItem("appliances") || [];
+  // console.log(appliances_data)
+}
 
-// import {appliances, electronics, packages,WFHEssentials,furniture,fitness} from "../components/data.js"
+appliances()
+
+const electronics = async()=>{
+  let res = await fetch(`http://localhost:3000/electronics`);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("electronics",JSON.stringify(data))
+  let electronics_data =  localStorage.getItem("electronics") || [];
+  // console.log(electronics_data)
+}
+
+electronics()
+
+const packages = async()=>{
+  let res = await fetch(`http://localhost:3000/packages`);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("packages",JSON.stringify(data))
+let packages_data =  localStorage.getItem("packages") || [];
+//   console.log(packages_data)
+}
+
+packages()
+
+const WFHEssentials = async()=>{
+  let res = await fetch(`http://localhost:3000/WFHEssentials`);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("WFHEssentials",JSON.stringify(data))
+  let wfh_data =  localStorage.getItem("WFHEssentials") || [];
+  // console.log(wfh_data)
+
+}
+
+WFHEssentials()
+
+const furniture = async()=>{
+  let res = await fetch(`http://localhost:3000/furniture`);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("furniture",JSON.stringify(data))
+  let furniture_data =  localStorage.getItem("furniture") || [];
+  // console.log(furniture_data)
+
+}
+
+furniture()
+
+const fitness = async()=>{
+  let res = await fetch(`http://localhost:3000/fitness `);
+  let data = await res.json();
+  // console.log(data);
+  localStorage.setItem("fitness",JSON.stringify(data))
+  let fitness_data =  localStorage.getItem("fitness") || [];
+  // console.log(fitness_data)
+
+}
+
+fitness()
+
+// import {appliances, electronics, packages,WFHEssentials,furniture,fitness} from "../Components/data.js"
 //   console.log(packages);
-//  let data=packages;
-//  let bedroomscount=packages.length;
-//  let WFHEssentialscount=WFHEssentials.length;
-//  let electronicscount=electronics.length;
-//  let furniturecount=furniture.length;
-//  let appliancescount=appliances.length;
-//  let fitnesscount=fitness.length;
+ let data=packages;
+ let bedroomscount=packages.length;
+ let WFHEssentialscount=WFHEssentials.length;
+ let electronicscount=electronics.length;
+ let furniturecount=furniture.length;
+ let appliancescount=appliances.length;
+ let fitnesscount=fitness.length;
 // console.log(bedroomscount,WFHEssentialscount,electronicscount,furniturecount,appliancescount,fitnesscount);
 
  let data1;
@@ -68,6 +136,8 @@ let productCard=(el)=>{
   div.append(img,h2,div1);
   return div;
 }
+
+
 let renderDom=(data1)=>{
   let cont=document.getElementById('packagecontainer');
   data1.forEach((el)=>{
@@ -83,14 +153,14 @@ for(let i=0; i<packages.length; i++){
  }
  let renderDom1=(data)=>{
   let cont=document.getElementById('packagecontainer');
-  data.forEach((el)=>{
+  data && data.forEach((el)=>{
     console.log(el)
       let card=productCard(el);
       cont.append(card);
 
   });
 };
-renderDom1(data);
+renderDom1();
 
 
 document.getElementById("itemcount1").innerText=bedroomscount;
@@ -102,12 +172,12 @@ document.getElementById("itemcount4").innerText=WFHEssentialscount;
 document.getElementById("itemcount5").innerText=furniturecount;
 document.getElementById("itemcount6").innerText=fitnesscount;
 
-//  
-// let productitem=(index)=>{
-//   localStorage.setItem("products",JSON.stringify(index));
-//   window.location.href="productview.html";
-//   console.log(index)
-// };
+ 
+let productitem=(index)=>{
+  localStorage.setItem("products",JSON.stringify(index));
+  window.location.href="productview.html";
+  console.log(index)
+};
 let btnvalue=document.getElementById("whatpage")
 if (data.length==4){
   btnvalue.innerText="Packages"
@@ -124,20 +194,14 @@ if (data.length==4){
 }
 
 
-import { sort, last, footer } from "../Components/footer.js";
-const sort_div = document.getElementById("footer");
-sort_div.innerHTML = sort();
-footer();
+// import { sort, last, footer } from "../Components/footer.js";
+// const sort_div = document.getElementById("footer");
+// sort_div.innerHTML = sort();
+// footer();
 
-const last_div = document.getElementById("last_portion");
-last_div.innerHTML = last();
+// const last_div = document.getElementById("last_portion");
+// last_div.innerHTML = last();
 
-// async function Product_list(){
-//     let res= await fetch(`http://localhost:3000/WFHEssentials`);
-//     console.log(res);
-//     let data = await res.json();
-//     console.log (data)
-// }
-// Product_list()
+
 
 
