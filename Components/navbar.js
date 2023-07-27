@@ -2,7 +2,7 @@
 const navbar = ()=>{
     return ` <div class="navbar">
     <div id="logo-div">
-        <a href="home.html"> <img
+        <a href="index.html"> <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_EBNx0delHQ4Bg4-VDwno4msVSYZ2QHW6A&usqp=CAU"
                 alt="Rentomojo"></a>
     </div>
@@ -33,11 +33,11 @@ const nav2=()=>{
      </div>
      <div id="part2">
         <ul>
-            <li class="pack"><a href="#">Packages</a></li>
-            <li><a href="#">Furniture</a></li>
-            <li><a href="#">Appliances</a></li>
-            <li><a href="#">Electronics</a></li>
-            <li><a href="#">Fitness</a></li>
+            <li class="pack"><a href="packages.html">Packages</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="appliance.html">Appliances</a></li>
+            <li><a href="electronics.html">Electronics</a></li>
+            <li><a href="fitness.html">Fitness</a></li>
         </ul>
     </div>       
     </div>
