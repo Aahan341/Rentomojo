@@ -171,6 +171,11 @@ function display(data){
       let btn=document.createElement("button");
       btn.innerText="See More"
       btn.setAttribute("class","button")
+      // btn.onclick=()=>{
+      //   // console.log(el)
+      //   // window.location.href="proview.html";
+      //   // localStorage.setItem("products",JSON.stringify(el))
+      // }
       div1.append(price,btn)
       div.append(img, name,div1)
     
