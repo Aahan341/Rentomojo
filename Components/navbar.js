@@ -12,7 +12,7 @@ const navbar = ()=>{
     <div class="searchBar">
         <input type="text" id="searchBar" placeholder="Search of Products">
     </div>
-    <button id="card"><a href="./checkout.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></button>
+    <button id="card"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i>Cart</a></button>
 
     <div class="div-button">
         <button id="button"><a href="login.html">LOGIN/SIGNUP</a></button>
