@@ -1,6 +1,5 @@
-
-const navbar = ()=>{
-    return ` <div class="navbar">
+const navbar = () => {
+  return ` <div class="navbar">
     <div id="logo-div">
         <a href="index.html"> <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_EBNx0delHQ4Bg4-VDwno4msVSYZ2QHW6A&usqp=CAU"
@@ -18,13 +17,12 @@ const navbar = ()=>{
         <button id="button"><a href="login.html">LOGIN/SIGNUP</a></button>
     </div>
 </div>
-    ` 
+    `;
 };
-export  {navbar};
+export { navbar };
 
-
-const nav2=()=>{
-    return `
+const nav2 = () => {
+  return `
     <div id="main">
     <div id="part1">
         <a href="index.html">Home</a>
@@ -41,8 +39,6 @@ const nav2=()=>{
         </ul>
     </div>       
     </div>
-    `
-}
-export {nav2};
-
-
+    `;
+};
+export { nav2 };

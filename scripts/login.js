@@ -1,7 +1,6 @@
 import { navbar } from "../Components/navbar.js";
-let nav=document.getElementById('navbar')
-nav.innerHTML=navbar();
-
+let nav = document.getElementById("navbar");
+nav.innerHTML = navbar();
 
 const forms = document.querySelector(".popup");
 const pwShowHide = document.querySelectorAll(".eye-icon");
@@ -38,9 +37,7 @@ sb.onclick = () => {
   window.location.href = "signup.html";
 };
 
-let dataApply=JSON.parse(localStorage.getItem("data")) ;
-
-
+let dataApply = JSON.parse(localStorage.getItem("data"));
 
 let log = document.getElementById("continue");
 log.addEventListener("click", function (event) {
@@ -55,10 +52,10 @@ let signin = (e) => {
   var email = document.getElementById("email").value;
   var pass = document.getElementById("password").value;
 
-//   var getEmail = localStorage.getItem("email");
-//   var getpass = localStorage.getItem("password");
-//   console.log(getEmail);
-//   console.log(getpass);
+  //   var getEmail = localStorage.getItem("email");
+  //   var getpass = localStorage.getItem("password");
+  //   console.log(getEmail);
+  //   console.log(getpass);
 
   if (email == dataApply.email && pass == dataApply.password) {
     window.location.href = "./index.html";
